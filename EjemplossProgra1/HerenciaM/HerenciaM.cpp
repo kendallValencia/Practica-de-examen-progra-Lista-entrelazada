@@ -2,91 +2,40 @@
 //
 
 #include <iostream>
-#include "Persona.h"
-#include "Estudiante.h"
-#include "Profesor.h"
-#include "Guarda.h"
-#include "Grupo.h"
 #include "ListaEnlazada.h"
-//using 
+using namespace std;
 
 int main()
 {
-
     ListaEnlazada lista;
-    lista.Insertar(20);
-    lista.Insertar(10);
-    lista.Insertar(8);
-    lista.Insertar(7);
-    lista.Insertar(30);
+    int numero;
 
+    cout << "Ingrese numeros para agregar a la lista (ingrese -1 para terminar):" << endl;
+
+    while (true)
+    {
+        cout << "Numero: ";
+        cin >> numero;
+        if (numero == -1)
+            break;
+        lista.InsertarFinal(numero);
+    }
+
+    cout << endl;
     lista.Mostrar();
-    /*int i = 10;
-    int* x = &i;
 
+    int multiplo;
+    cout << "\nIngrese un numero para buscar sus multiplos en la lista: ";
+    cin >> multiplo;
+    lista.BuscarMultiplos(multiplo);
 
-    cout <<"valor:" << i << endl;
-    cout << "Direccion:" << &i << endl;
-    cout << "Valor de *x:" << x << endl;
-    cout << "Valor en la direccion guardad *x:" << *x << endl;
+    cout << endl;
+    lista.Promedio();
 
-    i = 20;
-
-    cout << "valor:" << i << endl;
-    cout << "Direccion:" << &i << endl;
-    cout << "Valor de *x:" << x << endl;
-    cout << "Valor en la direccion guardad *x:" << *x << endl;
-    */
-
-
-   //// Persona p("Pablo", "54545",45);
-   //
-
-   // string Respuesta = "Si";
-   // 
-   // bool Continuar = true;
-
-   // 
-
-   // while (Continuar)
-   // {
-   //     Estudiante estudiante;
-   //     estudiante = estudiante.SolicitarDatos();
-
-   //     Estudiante estudiantes[3];
-   //     estudiantes[1] = estudiante;
-
-
-
-   //     Profesor profe;
-   //     Grupo grupo("TI",profe,estudiantes);
-   //     grupo.Mostrar();
-
-   //    // estudiante.Mostrar();
-   //     cout << "Desea continuar? Si/No" << endl;
-   //         cin >> Respuesta;
-
-   //     if (Respuesta == "No" || Respuesta == "no" )
-   //     {
-   //         Continuar = false;
-   //     }
-   //     else
-   //     {
-   //         Continuar = true;
-   //     }
-   //     
-
-
-
-
-   // }
-
-    
-   
-    
-    
-
+    cout << "\nPrograma finalizado." << endl;
+    return 0;
 }
+
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
 // Depurar programa: F5 o menú Depurar > Iniciar depuración

@@ -1,5 +1,8 @@
 #include "Nodo.h"
 
-Nodo::Nodo(int dato) : dato(dato), siguiente(nullptr) {
-
+Nodo::Nodo(int valor)
+{
+    dato = valor;
+    siguiente = nullptr;
+    anterior = nullptr;
 }

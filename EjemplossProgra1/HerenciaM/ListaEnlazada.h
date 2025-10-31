@@ -1,16 +1,17 @@
 #pragma once
 #include "Nodo.h"
+
 class ListaEnlazada
 {
 private:
-	Nodo* cabeza;
+    Nodo* cabeza;
+    Nodo* cola;
+
 public:
-	ListaEnlazada();
-	void Insertar(int valor);
-	void Mostrar();
-
+    ListaEnlazada();
+    void InsertarFinal(int valor);
+    void Mostrar();
+    void BuscarMultiplos(int numero);
+    void Promedio();
 };
-
-
-
 

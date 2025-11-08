@@ -13,5 +13,10 @@ public:
     void Mostrar();
     void BuscarMultiplos(int numero);
     void Promedio();
+
+	// Metodos para el examen 
+	void Menor();
+	void Mayor();
+    void ParesYimpares();
 };
 

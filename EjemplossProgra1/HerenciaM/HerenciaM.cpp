@@ -24,15 +24,12 @@ int main()
     cout << endl;
     lista.Mostrar();
 
-    int multiplo;
-    cout << "\nIngrese un numero para buscar sus multiplos en la lista: ";
-    cin >> multiplo;
-    lista.BuscarMultiplos(multiplo);
 
-    cout << endl;
-    lista.Promedio();
 
-    cout << "\nPrograma finalizado." << endl;
+	lista.Menor();
+	lista.Mayor();
+    lista.ParesYimpares();
+
     return 0;
 }
 
